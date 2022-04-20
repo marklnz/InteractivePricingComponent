@@ -1,0 +1,18 @@
+﻿<!--
+    If you want to enable Blazor routing, you should remove all of this contents,
+    and uncomment the below line. (See also: https://docs.microsoft.com/en-us/aspnet/core/blazor/routing )
+-->
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" />
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Mark Lawrence</a>.
+        </div>
+    </Found>
+    <NotFound>
+        <LayoutView>
+            <p>Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>

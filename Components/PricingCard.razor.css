@@ -1,0 +1,194 @@
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--pricing-component-background);
+    border-radius: 10px;
+    max-width: 90vw;
+    line-height: 2em;
+    box-shadow: 0 1em 1.5em 0.25em var(--empty-slider-bar);
+    padding: 2em 3em 0 3em;
+    letter-spacing: 10%;
+}
+
+.feature-list {
+    list-style-image: url(images/icon-check.svg);
+    list-style-position: inside;
+    color: var(--body-text);
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.feature-list > li {
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.page-views {
+    flex-grow: 1;
+    text-transform: capitalize;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.headline-price-panel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.headline-price {
+    color: var(--text-and-cta-background);
+    font-size: 3em;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.discount-panel,
+.price-panel,
+.cta-wrapper {
+    padding: 2em 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-panel,
+.cta-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-panel > span:last-of-type {
+    font-weight: 800;
+    padding-left: 0.25em;
+    text-align: center;
+}
+
+.price-panel > div:first-of-type {
+    width: 100%;
+}
+
+.price-panel > .page-views {
+    padding-bottom: 2em;
+}
+
+.price-panel > .headline-price-panel {
+    padding-top: 4em;
+}
+
+.discount-panel {
+    display: flex;
+    flex-direction: row;
+}
+
+.discount-panel > span {
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.discount-panel > span:last-of-type {
+    padding-left: 0.5em;
+}
+
+.flex-padding {
+    flex: 1;
+    text-align: end;
+}
+
+.cta-wrapper {
+    border-top: 1px solid var(--empty-slider-bar);
+    flex-direction: column;
+}
+
+.cta-button {
+    font-size: var(--body-text);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background-color: var(--text-and-cta-background);
+    color: var(--cta-text);
+    border-radius: 50px;
+    padding: 0.4em 3.5em;
+    line-height: 2em;
+}
+
+.cta-button:hover {
+    color: var(--main-background);
+}
+
+.discount-tag {
+    font-weight: 800;
+    font-size: 0.75em;
+    color: var(--discount-text);
+    background-color: var(--discount-background);
+    border-radius: 15px;
+    height: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.25em;
+    margin-left: 0.5em;
+}
+
+.discount-tag::after {
+    content: '-25%';
+}
+
+@media screen and (min-width: 376px) {
+    .pricing-card {
+        max-width: 40vw;
+        min-width: 576px;
+    }
+
+    .feature-list {
+        text-align: left;
+        padding-bottom: 0;
+    }
+
+    .headline-price {
+        grid-area: price;
+    }
+
+    .discount-panel,
+    .cta-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .price-panel {
+        padding: 2em 0;
+        height: 20vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 2fr);
+        grid-template-areas:
+            'pageviews price'
+            'slider slider';
+        gap: 0;
+        align-items: center;
+    }
+
+    .price-panel > .headline-price-panel {
+        padding-top: 0;
+        justify-content: flex-end;
+    }
+
+    .price-panel > div:first-of-type {
+        grid-area: slider;
+    }
+
+    .price-panel > .page-views {
+        padding-bottom: 0;
+        grid-area: pageviews;
+    }
+
+    .price-panel > span:last-of-type {
+        text-align: left;
+    }
+
+    .discount-panel {
+        padding: 0em 1em 2em 1em;
+    }
+
+    .discount-tag::after {
+        content: '25% discount';
+    }
+}

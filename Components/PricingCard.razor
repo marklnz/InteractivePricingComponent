@@ -1,0 +1,30 @@
+<div class="pricing-card">
+    <div>
+        <div class="price-panel">
+            <span class="page-views">@FormatNumber(GetPageViewCountFromSliderValue(_value)) PAGEVIEWS</span>
+            <div>
+                <Slider MinValue="1" MaxValue="5" Step="1" @bind-Value="_value"></Slider>
+            </div>
+            <div class="headline-price-panel">
+                <span class="headline-price">$@CalculatePricePerMonth(_value)</span>
+                <span> / month</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="discount-panel">
+        <span class="flex-padding">Monthly Billing</span>
+        <Toggle @bind-Value="_yearlyRate"></Toggle>
+        <span>Yearly Billing<span class="discount-tag"></span></span>
+    </div>
+
+    <div class="cta-wrapper">
+        <ul class="feature-list">
+            <li>Unlimited websites</li>
+            <li>100% data ownership</li>
+            <li>Email reports</li>
+        </ul>
+
+        <button class="cta-button">Start my trial</button>
+    </div>
+</div>

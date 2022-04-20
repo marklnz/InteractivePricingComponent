@@ -1,0 +1,42 @@
+input[type='checkbox'] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 2.75em;
+    height: 1.5em;
+    background: var(--toggle-background);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    margin: 0 0.75em;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 0.25em;
+    left: 0.25em;
+    width: 1em;
+    height: 1em;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked + label {
+    background: var(--full-slider-bar);
+}
+
+input:checked + label:after {
+    left: calc(100% - 0.25em);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 1.3em;
+}
