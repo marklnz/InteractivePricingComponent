@@ -75,7 +75,7 @@ body {
     font-size: var(--font-body-mobile);
     font-weight: 600;
     color: var(--body-text);
-    background-image: url('images/bg-pattern.svg');
+    background-image: url('../images/bg-pattern.svg');
     background-repeat: no-repeat;
     background-size: 100% 50%;
     background-color: var(--main-background);
